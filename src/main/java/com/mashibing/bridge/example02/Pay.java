@@ -11,9 +11,6 @@ public abstract class Pay {
     //桥接对象
     protected IPayMode iPayMode;
 
-    public Pay() {
-    }
-
     public Pay(IPayMode iPayMode) {
         this.iPayMode = iPayMode;
     }
