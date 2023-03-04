@@ -1,7 +1,7 @@
 package com.mashibing.adapter.example01;
 
 /**
- * 适配器类（SD兼容TF）
+ * 类适配器（SD兼容TF）
  * */
 
 public class SDAdapterTF extends TFCardImpl implements SDCard{

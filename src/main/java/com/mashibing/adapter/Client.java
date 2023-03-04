@@ -1,9 +1,7 @@
 package com.mashibing.adapter;
 
-import com.mashibing.adapter.example01.Computer;
-import com.mashibing.adapter.example01.SDAdapterTF;
-import com.mashibing.adapter.example01.SDCard;
-import com.mashibing.adapter.example01.SDCardImpl;
+import com.mashibing.adapter.example01.*;
+import com.mashibing.adapter.example02.SDAdapterTF1;
 import org.junit.Test;
 
 public class Client {
@@ -21,5 +19,20 @@ public class Client {
         SDAdapterTF sdAdapterTF = new SDAdapterTF();
         String readTF = computer.read(sdAdapterTF);
         System.out.println(readTF);
+    }
+
+    @Test
+    public void test02(){
+        Computer computer=new Computer();
+        SDCard sdCard=new SDCardImpl();
+        String read = computer.read(sdCard);
+        System.out.println(read);
+
+        System.out.println();
+
+        TFCard tfCard = new TFCardImpl();
+        SDAdapterTF1 sdAdapterTF1 = new SDAdapterTF1(tfCard);
+        String read1 = computer.read(sdAdapterTF1);
+        System.out.println(read1);
     }
 }
